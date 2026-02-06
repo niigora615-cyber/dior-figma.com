@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a,
+p {
+  text-decoration: none;
+}
+
+body {
+  background-color: #2b2b2b;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1110px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.da {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 40px;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+
+      justify-content: center;
+      padding: 10px;
+      @media (max-width: 750px) {
+        display: none;
+      }
+      a {
+        color: #fff;
+        font-family: "Work Sans" "sans-serif";
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+      }
+    }
+  }
+
+  .aaaa {
+    padding: 10px;
+  }
+
+  .aa {
+    align-items: center;
+
+    @media (max-width: 750px) {
+      img {
+        max-width: 300px;
+      }
+    }
+  }
+
+  button {
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: #a259ff;
+    @media (max-width: 750px) {
+      display: none;
+    }
+  }
+  @media (max-width: 750px) {
+    justify-content: end;
+  }
+}
+
+.gg {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.daaa {
+  display: none;
+  @media (max-width: 750px) {
+    display: block;
+    max-width: 50px;
+    border-radius: 20px;
+  }
+}
+
+.dior {
+  &__wrapper {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    h1 {
+      font-size: 50px;
+      width: 300px;
+      padding: 5px;
+      @media (max-width: 600px) {
+        font-size: 30px;
+      }
+    }
+    p {
+      font-size: 20px;
+      width: 400px;
+      padding: 9px;
+      @media (max-width: 600px) {
+        font-size: 20px;
+        width: 200px;
+      }
+    }
+  }
+}
+
+.dior {
+  padding: 40px;
+  button {
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: #a259ff;
+    gap: 10px;
+    display: flex;
+  }
+}
+
+.dior {
+  img {
+    max-width: 500px;
+  }
+  &__wrapper {
+    @media (max-width: 800px) {
+      flex-wrap: wrap;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.dior {
+  &_card {
+    justify-content: center;
+    padding: 20px;
+  }
+}
+
+.dior_cad {
+  background-color: #3b3b3b;
+  border-radius: 20px;
+  padding: 0px 0px;
+}
+
+.dior{
+  &_card{
+    // display: grid;
+    // gap: 20px;
+    // align-items: center;
+    // padding: 6px;
+    button{
+      display: flex;
+      gap: 30px;
+    }
+  }
+}
+
+.dior {
+
+		// .dior_card
+
+		&_card {
+		}
+
+		// .dior_cad
+
+		&_cad {
+		}
+
+		// .dior__wrapper
+
+		&__wrapper {
+		}
+}
+
+
+
+
+
+.artist__wrapper {
+      display: flex;
+}
+
+/* ===== VARIABLES ===== */
+$bg: #1f1f1f;
+$card: #2a2a2a;
+$text: #ffffff;
+$muted: #9ca3af;
+$accent: #8b5cf6;
+
+/* ===== MIXINS ===== */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mobile {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: $bg;
+  color: $text;
+}
+
+/* ===== SECTION ===== */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+
+  h2 {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  p {
+    margin-top: 8px;
+    color: $muted;
+  }
+}
+
+/* ===== CARDS ===== */
+.cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: $card;
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+
+  h3 {
+    margin: 20px 0 8px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  font-size: 42px;
+  background: radial-gradient(circle at top, #a855f7, #6d28d9);
+  @include flex-center;
+}
+
+/* ===== NEWSLETTER ===== */
+.news {
+  margin-top: 80px;
+  background: $card;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 16px;
+  }
+}
+
+.news-content {
+  h3 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  p {
+    color: $muted;
+  }
+}
+
+/* ===== FORM ===== */
+.form {
+  display: flex;
+  margin-top: 20px;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  input {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+  }
+
+  button {
+    margin-left: 8px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    border: none;
+    background: $accent;
+    color: white;
+    cursor: pointer;
+
+    @include mobile {
+      margin: 10px 0 0;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
